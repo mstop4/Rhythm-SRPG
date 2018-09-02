@@ -1,6 +1,12 @@
-for (var i=0; i<32; i++) {
-	note[i] = false;
-}
+notes = ds_list_create();
+ds_list_add(notes,0);
+ds_list_add(notes,8);
+ds_list_add(notes,16);
+ds_list_add(notes,24);
+ds_list_add(notes,32);
+ds_list_add(notes,40);
+ds_list_add(notes,48);
+ds_list_add(notes,56);
 
 // Optional: Check to see if FMODGMS has loaded properly
 if (FMODGMS_Util_Handshake() == "FMODGMS is working.")
@@ -29,3 +35,13 @@ FMODGMS_Snd_PlaySound(sound,channel);
 
 cur_order = 0;
 cur_row = 0;
+cur_step = 0;
+next_row_to_hit = -1;
+is_new_order = false;
+result_text = "";
+just_hit = false;
+flubbed = false;
+force_next_note = false;
+
+/*for (var i=0; i<64; i++)
+	show_debug_message(string(i) + " - " + string(wrap2(i,0,64)));*/

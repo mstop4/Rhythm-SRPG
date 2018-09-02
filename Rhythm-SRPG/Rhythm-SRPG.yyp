@@ -167,6 +167,22 @@
             }
         },
         {
+            "Key": "9dd57813-7fdc-4f19-880a-0ca53d3b4062",
+            "Value": {
+                "id": "bc00b2c1-69e4-43a2-929a-4c32a4b95d04",
+                "resourcePath": "fonts\\fnt_big\\fnt_big.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "9de77adb-106f-4e20-b83c-fb2200bca7b4",
+            "Value": {
+                "id": "1d49cd1b-0da6-43a4-af0c-b3bd61953ded",
+                "resourcePath": "fonts\\fnt_default\\fnt_default.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
                 "id": "3bb39e1f-db28-415b-a5e2-c2f9e03a3a64",
@@ -188,6 +204,14 @@
                 "id": "23199807-3409-4c7a-83bc-dc31c0ca45b0",
                 "resourcePath": "views\\b5163f67-806f-4772-867b-0104875b55f8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "cbd0a0d9-a381-47b1-966b-943f1058fa81",
+            "Value": {
+                "id": "c4f9d5f6-42f5-428a-8553-baa9e1ff2a66",
+                "resourcePath": "scripts\\wrap2\\wrap2.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -248,7 +272,7 @@
         }
     ],
     "script_order": [
-        
+        "cbd0a0d9-a381-47b1-966b-943f1058fa81"
     ],
     "tutorial": ""
 }
