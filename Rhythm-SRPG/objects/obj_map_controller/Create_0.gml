@@ -4,6 +4,7 @@ global.grid_width = room_width div CELL_SIZE;
 global.grid_height = room_height div CELL_SIZE;
 
 map_grid = mp_grid_create(0,0,global.grid_width, global.grid_height, CELL_SIZE, CELL_SIZE);
+mp_grid_add_instances(map_grid,obj_obstacle,false);
 
 cell_x = 0;
 cell_y = 0;
