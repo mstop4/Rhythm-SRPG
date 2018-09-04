@@ -22,13 +22,14 @@ for (var i=-move_range; i<=move_range; i++) {
 					move_range_grid[# _legal_cell_x, _legal_cell_y] = 1;
 					
 					// find attack range
-					for (var a=-attack_range; a<=attack_range; a++) {
+					for (var a=-max_attack_range; a<=max_attack_range; a++) {
 						if (_legal_cell_y + a >= 0 && _legal_cell_y + a < global.grid_width) {
-							var _attack_start = -attack_range + abs(a);
-							var _attack_end = _attack_start + (attack_range-abs(a)) * 2 + 1;
+							var _attack_start = -max_attack_range + abs(a);
+							var _attack_end = _attack_start + (max_attack_range-abs(a)) * 2 + 1;
 	
 							for (var b=_attack_start; b<_attack_end; b++) {
-								if (_legal_cell_x + b >= 0 && _legal_cell_x + b < global.grid_height)
+								var _dist = abs(b) + abs(a);
+								if (_dist >= min_attack_range && _legal_cell_x + b >= 0 && _legal_cell_x + b < global.grid_height)
 									attack_range_grid[# _legal_cell_x + b, _legal_cell_y + a] = 1;
 							}
 						}

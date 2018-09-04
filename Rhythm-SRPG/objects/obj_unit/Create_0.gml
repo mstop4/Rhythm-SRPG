@@ -6,6 +6,6 @@ move_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 attack_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 my_state = unitState.ready;
 
-show_range = true;
+show_range = false;
 
 alarm[0] = 1;

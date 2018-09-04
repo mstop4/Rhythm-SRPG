@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 73,
+            "enumb": 0,
             "eventtype": 8,
             "m_owner": "00b3dbe6-5dd4-4270-96a8-0be5ed00a15c"
         },
@@ -77,6 +77,20 @@
             "varType": 1
         },
         {
+            "id": "0eadd426-17a8-44c0-99f0-4f3d723e0c4f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "min_attack_range",
+            "varType": 1
+        },
+        {
             "id": "81c80ae2-0db9-4943-9062-4979caec9a3c",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -86,8 +100,8 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "2",
-            "varName": "attack_range",
+            "value": "1",
+            "varName": "max_attack_range",
             "varType": 1
         }
     ],
