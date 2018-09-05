@@ -1,5 +1,9 @@
 if (show_range) {
-	draw_set_alpha(0.5);
+	if (obj_map_controller.mode == mapMode.pan)
+		draw_set_alpha(0.25);
+	else
+		draw_set_alpha(0.5);
+		
 	for (var i=0; i<global.grid_height; i++) {
 		for (var j=0; j<global.grid_width; j++) {
 			if (move_range_grid[# j, i]) 

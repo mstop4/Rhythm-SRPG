@@ -16,13 +16,13 @@ for (var i=-move_range; i<=move_range; i++) {
 		for (var j=_move_start; j<_move_end; j++) {
 			if (cell_x + j >= 0 && cell_x + j < global.grid_height) {
 				
-				var _unit_at = instance_place((cell_x + j) * CELL_SIZE, (cell_y + i) * CELL_SIZE, obj_unit);
+				var _unit_at = instance_position((cell_x + j) * CELL_SIZE, (cell_y + i) * CELL_SIZE, obj_unit);
 				
-				if (_unit_at == noone) {
+				if (_unit_at == noone || _unit_at == id) {
 				
 					_result = mp_grid_path(_map_grid,_temp_path,
-								x+CELL_SIZE/2,y+CELL_SIZE/2,
-								x+(j+0.5)*CELL_SIZE,y+(i+0.5)*CELL_SIZE,
+								x,y,
+								x+j*CELL_SIZE,y+i*CELL_SIZE,
 								false);
 							
 					if (_result && path_get_length(_temp_path) <= move_range * CELL_SIZE) {

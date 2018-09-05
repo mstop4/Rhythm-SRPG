@@ -5,6 +5,7 @@ global.grid_height = room_height div CELL_SIZE;
 
 player_map_grid = mp_grid_create(0,0,global.grid_width, global.grid_height, CELL_SIZE, CELL_SIZE);
 enemy_map_grid = mp_grid_create(0,0,global.grid_width, global.grid_height, CELL_SIZE, CELL_SIZE);
+
 mp_grid_add_instances(player_map_grid,obj_obstacle,false);
 mp_grid_add_instances(enemy_map_grid,obj_obstacle,false);
 

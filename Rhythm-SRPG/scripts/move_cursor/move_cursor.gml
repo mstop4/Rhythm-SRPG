@@ -1,4 +1,4 @@
-if (!is_moving && !cursor_lock) {
+if (!is_moving && !cursor_lock && show_cursor) {
 	is_moving = true;
 	cursor_lock = true;
 
