@@ -7,6 +7,7 @@ enum unitState {
 enum mapMode {
 	pan,
 	move,
+	moveWait,
 	action,
-	wait
+	actionWait
 }
