@@ -3,3 +3,10 @@ enum unitState {
 	moved,
 	attacked
 }
+
+enum mapMode {
+	pan,
+	move,
+	action,
+	wait
+}

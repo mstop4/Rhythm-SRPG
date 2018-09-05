@@ -1,1 +1,1 @@
-calculate_range();
+calculate_range(obj_map_controller.enemy_map_grid);

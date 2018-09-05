@@ -1,5 +1,5 @@
-cell_x = 0;
-cell_y = 0;
+cell_x = x div CELL_SIZE;
+cell_y = y div CELL_SIZE;
 selected = false;
 my_path = path_add();
 move_range_grid = ds_grid_create(global.grid_width,global.grid_height);

@@ -12,12 +12,12 @@ if (!is_moving && !cursor_lock) {
 	
 	alarm[1] = move_time;
 	
-	prev_x = owner.cell_x * CELL_SIZE;
-	prev_y = owner.cell_y * CELL_SIZE;
+	prev_x = obj_map_controller.cell_x * CELL_SIZE;
+	prev_y = obj_map_controller.cell_y * CELL_SIZE;
 	
-	owner.cell_x = clamp(owner.cell_x+argument[0], 0, global.grid_width-1);
-	owner.cell_y = clamp(owner.cell_y+argument[1], 0, global.grid_height-1);
+	obj_map_controller.cell_x = clamp(obj_map_controller.cell_x+argument[0], 0, global.grid_width-1);
+	obj_map_controller.cell_y = clamp(obj_map_controller.cell_y+argument[1], 0, global.grid_height-1);
 	
-	target_x = owner.cell_x * CELL_SIZE;
-	target_y = owner.cell_y * CELL_SIZE;
+	target_x = obj_map_controller.cell_x * CELL_SIZE;
+	target_y = obj_map_controller.cell_y * CELL_SIZE;
 }
