@@ -22,3 +22,6 @@ FMODGMS_Snd_PlaySound(sound,channel);
 new_row_ticker = false;
 prev_row = -1;
 cur_row = -1;
+
+frame_counter = 0;
+frames_per_row = 0;
