@@ -39,7 +39,7 @@ if (!is_moving && !cursor_lock) {
 						with (selected_unit) {
 							cell_x = other.cell_x;
 							cell_y = other.cell_y;
-							path_start(obj_map_cursor.unit_path,my_path_speed,path_action_stop,true);
+							path_start_rhythm();
 						}
 			
 						mode = mapMode.moveWait;
