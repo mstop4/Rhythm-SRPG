@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "e53d6afa-662a-4a8e-ab97-2fc06f3c3922",
+            "Value": {
+                "id": "22b7c3d7-0b3f-457e-8dd6-5d365578bbb0",
+                "resourcePath": "objects\\obj_audio_controller\\obj_audio_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ea8c93b2-65eb-4765-ba02-c75930798eed",
             "Value": {
                 "id": "825c6bc4-aa43-47d8-9a34-ef4eb5c2b737",
