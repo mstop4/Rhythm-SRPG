@@ -4,4 +4,3 @@
 * text=auto
 *.yy linguist-language=Game Maker Language
 *.nsi linguist-language=Game Maker Language
-*.pat linguist-detectable=false

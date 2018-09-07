@@ -32,6 +32,7 @@ if (!is_moving && !cursor_lock) {
 						selected_unit.my_state = unitState.moved;
 						obj_map_cursor.cursor_lock = false;
 						mode = mapMode.action;
+						toggle_menu(true);
 					}
 			
 					// moving to another spot
@@ -53,6 +54,7 @@ if (!is_moving && !cursor_lock) {
 					calculate_range(other.player_map_grid);
 					
 				mode = mapMode.actionWait;
+				toggle_menu(false);
 				alarm[0] = 30;
 				break;
 		}

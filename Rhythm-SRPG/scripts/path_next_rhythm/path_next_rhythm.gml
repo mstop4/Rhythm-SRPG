@@ -17,4 +17,5 @@ else {
 	my_state = unitState.moved;
 	can_move = false;
 	is_moving = false;
+	toggle_menu(true);
 }

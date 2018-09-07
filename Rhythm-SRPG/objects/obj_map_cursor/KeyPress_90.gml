@@ -44,6 +44,7 @@ if (!is_moving && !cursor_lock) {
 				plan_path();
 				
 				mode = mapMode.move;
+				toggle_menu(false);
 				break;
 		}
 	}
