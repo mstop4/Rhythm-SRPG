@@ -1,7 +1,7 @@
 // step
-time_per_step = 60 / bpm / 2;
+time_per_step = 60 / bpm  / 2;
 step_number = 0;
-num_steps = 16; 
+num_steps = 8; 
 
 // timing
 timer = 0;

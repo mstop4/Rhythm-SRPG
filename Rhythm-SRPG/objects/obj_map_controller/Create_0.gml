@@ -2,6 +2,8 @@
 
 global.grid_width = room_width div CELL_SIZE;
 global.grid_height = room_height div CELL_SIZE;
+global.camera_x = camera_get_view_x(view_camera[0]);
+global.camera_y = camera_get_view_y(view_camera[0]);
 
 env_grid = ds_grid_create(global.grid_width, global.grid_height);
 player_map_grid = mp_grid_create(0,0,global.grid_width, global.grid_height, CELL_SIZE, CELL_SIZE);

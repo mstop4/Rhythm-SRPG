@@ -55,6 +55,7 @@ if (!is_moving && !cursor_lock) {
 					
 				mode = mapMode.actionWait;
 				toggle_menu(false);
+				obj_battle_controller.show_battle = true;
 				alarm[0] = 30;
 				break;
 		}
