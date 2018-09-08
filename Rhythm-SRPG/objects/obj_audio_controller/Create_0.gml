@@ -1,27 +1,18 @@
-// Optional: Check to see if FMODGMS has loaded properly
-if (FMODGMS_Util_Handshake() != "FMODGMS is working.")
-    exit;
-	
-// Create the system
-FMODGMS_Sys_Create();
+// step
+time_per_step = 60 / bpm / 2;
+step_number = 0;
+num_steps = 16; 
 
-// Initialize the system
-FMODGMS_Sys_Initialize(32);
+// timing
+timer = 0;
+last_pos = 0;
+dt = 0;
+sound_length = audio_sound_length(my_music);
 
-FMODGMS_Snd_Set_DecodeBufferSize(3000);
-
-// Load sound
-sound = FMODGMS_Snd_LoadSound(working_directory + "M64CRED.IT");
-
-// Create a channel
-channel = FMODGMS_Chan_CreateChannel();
-
-// Play sound
-FMODGMS_Snd_PlaySound(sound,channel);
-
-new_row_ticker = false;
-prev_row = -1;
-cur_row = -1;
-
+// stats
+step_ticker = false;
 frame_counter = 0;
-frames_per_row = 0;
+step_frames = 0;
+light_on = false;
+
+bgm = audio_play_sound(my_music,100,true);

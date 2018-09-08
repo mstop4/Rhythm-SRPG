@@ -4,7 +4,7 @@ if (is_moving) {
 		y = lerp(target_y,prev_y,alarm[1]/path_step_time);
 	}
 	
-	else if (obj_audio_controller.new_row_ticker){
+	else if (obj_audio_controller.step_ticker){
 		path_next_rhythm();
 	}
 }

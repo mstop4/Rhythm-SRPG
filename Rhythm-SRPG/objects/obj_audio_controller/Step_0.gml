@@ -1,12 +1,23 @@
-if (new_row_ticker)
-	new_row_ticker = false;
+if (step_ticker)
+	step_ticker = false;
 	
-cur_row = FMODGMS_Chan_Get_ModRow(channel);
-frame_counter++;
+var _this_pos = audio_sound_get_track_position(bgm);
+if (_this_pos >= last_pos) 
+	dt = _this_pos - last_pos;
+else
+	dt = _this_pos + sound_length - last_pos;
+	
+timer += dt;
+last_pos = _this_pos;
 
-if (cur_row div 2 != prev_row div 2 && !new_row_ticker) {
-	new_row_ticker = true;
-	prev_row = cur_row;
-	frames_per_row = frame_counter;
+if (timer >= time_per_step) {
+	step_ticker = true;
+	timer -= time_per_step;
+	step_frames = frame_counter;
 	frame_counter = 0;
+	light_on = true;
+	step_number = wrap(step_number+1,0,num_steps);
+	alarm[0] = 3;
 }
+
+frame_counter++;

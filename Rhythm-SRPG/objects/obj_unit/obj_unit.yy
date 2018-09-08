@@ -102,7 +102,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "5",
+            "value": "10",
             "varName": "move_range",
             "varType": 1
         },

@@ -9,12 +9,12 @@ ds_grid_clear(attack_range_grid,0);
 
 // find movement range
 for (var i=-move_range; i<=move_range; i++) {
-	if (cell_y + i >= 0 && cell_y + i < global.grid_width) {
+	if (cell_y + i >= 0 && cell_y + i < global.grid_height) {
 		var _move_start = -move_range + abs(i);
 		var _move_end = _move_start + (move_range-abs(i)) * 2 + 1;
 	
 		for (var j=_move_start; j<_move_end; j++) {
-			if (cell_x + j >= 0 && cell_x + j < global.grid_height) {
+			if (cell_x + j >= 0 && cell_x + j < global.grid_width) {
 				
 				var _unit_at = instance_position((cell_x + j) * CELL_SIZE, (cell_y + i) * CELL_SIZE, obj_unit);
 				
@@ -32,14 +32,14 @@ for (var i=-move_range; i<=move_range; i++) {
 					
 						// find attack range
 						for (var a=-max_attack_range; a<=max_attack_range; a++) {
-							if (_legal_cell_y + a >= 0 && _legal_cell_y + a < global.grid_width) {
+							if (_legal_cell_y + a >= 0 && _legal_cell_y + a < global.grid_height) {
 							
 								var _attack_start = -max_attack_range + abs(a);
 								var _attack_end = _attack_start + (max_attack_range-abs(a)) * 2 + 1;
 	
 								for (var b=_attack_start; b<_attack_end; b++) {
 									var _dist = abs(b) + abs(a);
-									if (_dist >= min_attack_range && _legal_cell_x + b >= 0 && _legal_cell_x + b < global.grid_height)
+									if (_dist >= min_attack_range && _legal_cell_x + b >= 0 && _legal_cell_x + b < global.grid_width)
 										attack_range_grid[# _legal_cell_x + b, _legal_cell_y + a] = 1;
 								}
 							}

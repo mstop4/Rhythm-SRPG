@@ -39,14 +39,6 @@
             }
         },
         {
-            "Key": "018c7a49-ef10-4f6d-a9fc-4d62578d9a19",
-            "Value": {
-                "id": "5d6ae9cf-1e83-453f-8c0d-a7640526ef04",
-                "resourcePath": "objects\\obj_audio_test\\obj_audio_test.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "06d9ed36-37b4-44f0-b0ac-c88b3d5e69d1",
             "Value": {
                 "id": "bc354ca8-9969-4c43-beba-504c991a17bc",
@@ -383,6 +375,14 @@
             }
         },
         {
+            "Key": "b4e279e2-26be-4c26-ac4a-3c9b5d0335d0",
+            "Value": {
+                "id": "3f301327-1933-4542-8029-b79a98a4468c",
+                "resourcePath": "objects\\obj_audio_controller\\obj_audio_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b5163f67-806f-4772-867b-0104875b55f8",
             "Value": {
                 "id": "23199807-3409-4c7a-83bc-dc31c0ca45b0",
@@ -466,7 +466,7 @@
             "Key": "e53d6afa-662a-4a8e-ab97-2fc06f3c3922",
             "Value": {
                 "id": "22b7c3d7-0b3f-457e-8dd6-5d365578bbb0",
-                "resourcePath": "objects\/obj_audio_controller\/obj_audio_controller.yy",
+                "resourcePath": "objects\\obj_audio_controller_FMOD\\obj_audio_controller_FMOD.yy",
                 "resourceType": "GMObject"
             }
         },
