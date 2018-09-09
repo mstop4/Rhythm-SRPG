@@ -16,3 +16,4 @@ step_frames = 0;
 light_on = false;
 
 bgm = audio_play_sound(my_music,100,true);
+audio_sound_gain(bgm,0,0);

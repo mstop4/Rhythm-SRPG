@@ -1,6 +1,6 @@
 if (show_menu) {
 	draw_set_colour(c_green);
-	draw_rectangle(x,y,x+64,y+16*ds_list_size(item_names),false);
+	draw_rectangle(x,y,x+menu_width,y+menu_height,false);
 	draw_set_colour(c_white);
 	draw_set_font(fnt_pixel);
 	

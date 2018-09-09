@@ -5,7 +5,6 @@ if (!is_moving && !cursor_lock) {
 			case mapMode.pan: 
 				if (selected_unit != noone &&
 					selected_unit.my_state != unitState.attacked) {
-					//selected_unit.show_range = true;
 					plan_path();
 					mode = mapMode.move;
 				}
@@ -46,17 +45,6 @@ if (!is_moving && !cursor_lock) {
 						mode = mapMode.moveWait;
 					}
 				}
-				break;
-				
-			case mapMode.action:
-				// refresh player ranges
-				with (obj_unit)
-					calculate_range(other.player_map_grid);
-					
-				mode = mapMode.actionWait;
-				toggle_menu(false);
-				obj_battle_controller.show_battle = true;
-				alarm[0] = 30;
 				break;
 		}
 	}
