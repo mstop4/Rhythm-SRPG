@@ -147,6 +147,20 @@
             "value": "3",
             "varName": "path_step_time",
             "varType": 1
+        },
+        {
+            "id": "8e1a72a9-3a67-407d-8077-8a9fe6cd9f96",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "team.player",
+            "varName": "my_team",
+            "varType": 4
         }
     ],
     "solid": false,

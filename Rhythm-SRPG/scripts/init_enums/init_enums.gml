@@ -11,3 +11,9 @@ enum mapMode {
 	action,
 	actionWait
 }
+
+enum team {
+	player,
+	enemy,
+	ally
+}

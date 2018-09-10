@@ -29,5 +29,12 @@ for (var i=0; i<_env_tiles_height; i++) {
 cell_x = 0;
 cell_y = 0;
 selected_unit = noone;
+phase = team.player;
+show_turn_banner = false;
+
+for (var i=0; i<3; i++) {
+	units_to_act[i] = 0;
+	units_alive[i] = 0;
+}
 
 mode = mapMode.pan;
