@@ -1,4 +1,4 @@
-just_hit = true;
+/*just_hit = true;
 alarm[0] = 5;
 
 if (!flubbed) {
@@ -14,4 +14,4 @@ if (!flubbed) {
 }
 
 else 
-	result_text = "Miss!";
+	result_text = "Miss!";*/

@@ -127,14 +127,6 @@
             }
         },
         {
-            "Key": "3f798044-6f78-4e3c-83e0-e754414253f4",
-            "Value": {
-                "id": "0e2af0d2-6216-4e1b-aecf-8e301318760e",
-                "resourcePath": "extensions\/FMODGMS\/FMODGMS.yy",
-                "resourceType": "GMExtension"
-            }
-        },
-        {
             "Key": "408194cf-1396-45c5-b8fe-f03b3b6078ae",
             "Value": {
                 "id": "3b54050d-7cbc-49ed-b6d8-cc59515ed357",
@@ -516,6 +508,14 @@
                 "id": "98365497-3f00-4a42-a05f-18b631ef76e6",
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "fc18510e-7e5c-494e-a393-5295babcb004",
+            "Value": {
+                "id": "4e444cca-5547-4aeb-a9dd-f605f1351d6c",
+                "resourcePath": "sprites\\spr_enemy_unit\\spr_enemy_unit.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],

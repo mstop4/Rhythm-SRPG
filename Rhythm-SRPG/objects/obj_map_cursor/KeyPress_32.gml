@@ -4,6 +4,7 @@ if (!is_moving && !cursor_lock) {
 		switch (mode) {
 			case mapMode.pan: 
 				if (selected_unit != noone &&
+					selected_unit.my_team == team.player &&
 					selected_unit.my_state != unitState.attacked) {
 					plan_path();
 					mode = mapMode.move;

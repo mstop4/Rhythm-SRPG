@@ -1,4 +1,4 @@
-draw_set_font(fnt_default);
+/*draw_set_font(fnt_default);
 draw_set_colour(c_white);
 draw_text(x,y,"FMOD-GMS2 Sync Test");
 
@@ -36,4 +36,4 @@ else
 draw_set_font(fnt_big);
 draw_text(x,y+128,result_text);
 
-//draw_text(x,y+128,"Next row to hit: " + string(next_row_to_hit));
+//draw_text(x,y+128,"Next row to hit: " + string(next_row_to_hit));*/

@@ -7,4 +7,4 @@ if (light_on) {
 else
 	draw_set_color(c_green);
 	
-draw_circle(x+24,y+128,16,false);
+draw_circle(x+6,y+32,4,false);

@@ -1,1 +1,1 @@
-just_hit = false;
+//just_hit = false;

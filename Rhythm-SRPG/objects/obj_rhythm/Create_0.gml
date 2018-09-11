@@ -1,4 +1,4 @@
-notes = ds_list_create();
+/*notes = ds_list_create();
 ds_list_add(notes,0);
 ds_list_add(notes,8);
 ds_list_add(notes,16);

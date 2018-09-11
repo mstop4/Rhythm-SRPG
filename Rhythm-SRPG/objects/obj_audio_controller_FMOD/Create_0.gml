@@ -1,5 +1,5 @@
 // Optional: Check to see if FMODGMS has loaded properly
-if (FMODGMS_Util_Handshake() != "FMODGMS is working.")
+/*if (FMODGMS_Util_Handshake() != "FMODGMS is working.")
     exit;
 	
 // Create the system
@@ -24,4 +24,4 @@ prev_row = -1;
 cur_row = -1;
 
 frame_counter = 0;
-frames_per_row = 0;
+frames_per_row = 0;*/
