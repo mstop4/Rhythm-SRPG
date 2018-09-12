@@ -1,7 +1,9 @@
+/// @desc end unit turn
 selected_unit.my_state = unitState.attacked;
 selected_unit = noone;
 obj_battle_controller.show_battle = false;
 units_to_act[phase]--;
+map_mp_grid();
 
 if (units_to_act[phase] <= 0) {
 	do {

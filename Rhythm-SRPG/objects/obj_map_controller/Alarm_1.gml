@@ -1,3 +1,4 @@
+/// @desc end turn banner
 if (phase == team.player) {
 	with (obj_unit) {
 		my_state = unitState.ready;
