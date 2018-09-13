@@ -29,10 +29,7 @@ if (!is_moving && !cursor_lock) {
 					
 					// moving to same spot
 					if (cell_x == selected_unit.cell_x && cell_y == selected_unit.cell_y) {
-						selected_unit.my_state = unitState.moved;
-						obj_map_cursor.cursor_lock = false;
-						mode = mapMode.action;
-						toggle_menu(true);
+						unit_end_move_player(selected_unit);
 					}
 			
 					// moving to another spot

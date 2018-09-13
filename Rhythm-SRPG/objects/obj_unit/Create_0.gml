@@ -8,6 +8,7 @@ my_state = unitState.ready;
 show_range = false;
 move_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 attack_range_grid = ds_grid_create(global.grid_width,global.grid_height);
+local_attack_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 
 //path
 cur_path_node = 0;

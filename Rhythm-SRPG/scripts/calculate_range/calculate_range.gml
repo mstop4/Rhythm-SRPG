@@ -6,6 +6,22 @@ var _result;
 
 ds_grid_clear(move_range_grid,0);
 ds_grid_clear(attack_range_grid,0);
+ds_grid_clear(local_attack_range_grid,0);
+
+// find local attack range
+for (var a=-max_attack_range; a<=max_attack_range; a++) {
+	if (cell_y + a >= 0 && cell_y + a < global.grid_height) {
+							
+		var _attack_start = -max_attack_range + abs(a);
+		var _attack_end = _attack_start + (max_attack_range-abs(a)) * 2 + 1;
+	
+		for (var b=_attack_start; b<_attack_end; b++) {
+			var _dist = abs(b) + abs(a);
+			if (_dist >= min_attack_range && cell_x + b >= 0 && cell_x + b < global.grid_width)
+				local_attack_range_grid[# cell_x + b, cell_y + a] = 1;
+		}
+	}
+}
 
 // find movement range
 for (var i=-move_range; i<=move_range; i++) {

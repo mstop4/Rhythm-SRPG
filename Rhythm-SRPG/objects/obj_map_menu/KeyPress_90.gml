@@ -22,7 +22,7 @@ with (obj_map_controller) {
 			plan_path();
 				
 			mode = mapMode.move;
-			toggle_menu(false);
+			menu_toggle(false);
 			break;
 	}
 }

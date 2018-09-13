@@ -10,12 +10,9 @@ if (cur_path_node < max_path_node) {
 }
 
 else {
-	obj_map_cursor.cursor_lock = false;
-	obj_map_controller.mode = mapMode.action;
 	calculate_range(obj_map_controller.player_map_grid);
-
-	my_state = unitState.moved;
 	can_move = false;
 	is_moving = false;
-	toggle_menu(true);
+	
+	unit_end_move_player(id);
 }

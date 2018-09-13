@@ -8,7 +8,7 @@ with (obj_map_controller) {
 				calculate_range(other.player_map_grid);
 					
 			mode = mapMode.actionWait;
-			toggle_menu(false);
+			menu_toggle(false);
 			
 			if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Attack") {
 				obj_battle_controller.show_battle = true;
