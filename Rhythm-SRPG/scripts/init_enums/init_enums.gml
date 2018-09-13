@@ -9,6 +9,7 @@ enum mapMode {
 	move,
 	moveWait,
 	action,
+	chooseTarget,
 	actionWait
 }
 
