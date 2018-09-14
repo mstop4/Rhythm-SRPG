@@ -9,6 +9,6 @@ switch (mode) {
 		
 	case mapMode.move:
 		// find path to cursor, overwrite existing path only if path is found.
-		plan_path();
+		plan_path(player_map_grid);
 		break;
 }

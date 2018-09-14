@@ -28,3 +28,14 @@ with (obj_unit) {
 		mp_grid_add_cell(obj_map_controller.player_map_grid,cell_x,cell_y);
 	}
 }
+
+with (obj_unit) {
+	if (my_team == team.player || my_team == team.ally) {
+		calculate_range(obj_map_controller.player_map_grid);
+	}
+	
+	else if (my_team == team.enemy) {
+		calculate_range(obj_map_controller.enemy_map_grid);
+	}
+		
+}

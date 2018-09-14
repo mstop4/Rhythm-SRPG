@@ -8,21 +8,6 @@ ds_grid_clear(move_range_grid,0);
 ds_grid_clear(attack_range_grid,0);
 ds_grid_clear(local_attack_range_grid,0);
 
-// find local attack range
-for (var a=-max_attack_range; a<=max_attack_range; a++) {
-	if (cell_y + a >= 0 && cell_y + a < global.grid_height) {
-							
-		var _attack_start = -max_attack_range + abs(a);
-		var _attack_end = _attack_start + (max_attack_range-abs(a)) * 2 + 1;
-	
-		for (var b=_attack_start; b<_attack_end; b++) {
-			var _dist = abs(b) + abs(a);
-			if (_dist >= min_attack_range && cell_x + b >= 0 && cell_x + b < global.grid_width)
-				local_attack_range_grid[# cell_x + b, cell_y + a] = 1;
-		}
-	}
-}
-
 // find movement range
 for (var i=-move_range; i<=move_range; i++) {
 	if (cell_y + i >= 0 && cell_y + i < global.grid_height) {
@@ -41,7 +26,9 @@ for (var i=-move_range; i<=move_range; i++) {
 								x+j*CELL_SIZE,y+i*CELL_SIZE,
 								false);
 							
-					if (_result && path_get_length(_temp_path) <= move_range * CELL_SIZE) {
+					var _len = path_get_length(_temp_path);
+					print(_len);
+					if (_result && _len <= move_range * CELL_SIZE) {
 						var _legal_cell_x = cell_x + j;
 						var _legal_cell_y = cell_y + i;
 						move_range_grid[# _legal_cell_x, _legal_cell_y] = 1;
@@ -67,5 +54,19 @@ for (var i=-move_range; i<=move_range; i++) {
 	}
 }
 
+// find local attack range
+for (var a=-max_attack_range; a<=max_attack_range; a++) {
+	if (cell_y + a >= 0 && cell_y + a < global.grid_height) {
+							
+		var _attack_start = -max_attack_range + abs(a);
+		var _attack_end = _attack_start + (max_attack_range-abs(a)) * 2 + 1;
+	
+		for (var b=_attack_start; b<_attack_end; b++) {
+			var _dist = abs(b) + abs(a);
+			if (_dist >= min_attack_range && cell_x + b >= 0 && cell_x + b < global.grid_width)
+				local_attack_range_grid[# cell_x + b, cell_y + a] = 1;
+		}
+	}
+}
 
 path_delete(_temp_path);

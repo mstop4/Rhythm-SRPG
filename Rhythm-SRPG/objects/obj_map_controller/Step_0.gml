@@ -26,7 +26,7 @@ if (!is_moving && !cursor_lock) {
 				if (selected_unit != noone &&
 					selected_unit.my_team == team.player &&
 					selected_unit.my_state != unitState.attacked) {
-					plan_path();
+					plan_path(player_map_grid);
 					mode = mapMode.move;
 				}
 				break;
@@ -70,7 +70,7 @@ if (!is_moving && !cursor_lock) {
 			case mapMode.action:
 				// refresh player ranges
 				with (obj_unit)
-					calculate_range(other.player_map_grid);
+					calculate_range(obj_map_controller.player_map_grid);
 					
 				menu_toggle(false);
 			
@@ -139,7 +139,7 @@ if (!is_moving && !cursor_lock) {
 					cell_y = prev_cell_y;
 					x = (cell_x + 0.5) * CELL_SIZE;
 					y = (cell_y + 0.5) * CELL_SIZE;
-					calculate_range(other.player_map_grid);
+					calculate_range(obj_map_controller.player_map_grid);
 					show_range = true;
 					my_state = unitState.ready;
 				}
@@ -150,7 +150,7 @@ if (!is_moving && !cursor_lock) {
 				}
 				
 				// find path to cursor, overwrite existing path only if path is found.
-				plan_path();
+				plan_path(player_map_grid);
 				
 				mode = mapMode.move;
 				menu_toggle(false);
