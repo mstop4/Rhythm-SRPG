@@ -19,6 +19,10 @@ env_tiles = layer_tilemap_get_id(env_layer);
 env_tiles_width = tilemap_get_width(env_tiles);
 env_tiles_height = tilemap_get_height(env_tiles);
 
+is_moving = false;
+cursor_lock = false;
+first_move = true;
+
 cell_x = 0;
 cell_y = 0;
 selected_unit = noone;
