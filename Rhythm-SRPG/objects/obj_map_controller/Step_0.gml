@@ -72,17 +72,29 @@ if (!is_moving && !cursor_lock) {
 				with (obj_unit)
 					calculate_range(other.player_map_grid);
 					
-				mode = mapMode.actionWait;
 				menu_toggle(false);
 			
 				if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Attack") {
-					obj_battle_controller.show_battle = true;
-					alarm[0] = 60;
+					mode = mapMode.chooseTarget;
+					obj_map_cursor.show_cursor = true;
+					cell_x = selected_unit.cell_x;
+					cell_y = selected_unit.cell_y;
+					obj_map_cursor.prev_x = cell_x;
+					obj_map_cursor.prev_y = cell_y;
+					obj_map_cursor.target_x = cell_x;
+					obj_map_cursor.target_y = cell_y;
+					obj_map_cursor.x = cell_x * CELL_SIZE;
+					obj_map_cursor.y = cell_y * CELL_SIZE;
+					selected_unit.show_range = true;
 				}
 			
 				else if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Wait") {
+					mode = mapMode.actionWait;
 					alarm[0] = 1;
 				}
+				break;
+				
+			case mapMode.chooseTarget:
 				break;
 		}
 	}
@@ -133,6 +145,21 @@ if (!is_moving && !cursor_lock) {
 				
 				mode = mapMode.move;
 				menu_toggle(false);
+				break;
+				
+			case mapMode.chooseTarget:
+				menu_toggle(true);
+				obj_map_cursor.show_cursor = false;
+				cell_x = selected_unit.cell_x;
+				cell_y = selected_unit.cell_y;
+				obj_map_cursor.prev_x = cell_x;
+				obj_map_cursor.prev_y = cell_y;
+				obj_map_cursor.target_x = cell_x;
+				obj_map_cursor.target_y = cell_y;
+				obj_map_cursor.x = cell_x * CELL_SIZE;
+				obj_map_cursor.y = cell_y * CELL_SIZE;
+				selected_unit.show_range = false;
+				mode = mapMode.action;
 				break;
 		}
 	}
