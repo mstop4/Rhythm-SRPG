@@ -4,7 +4,8 @@ if (show_range) {
 	else
 		draw_set_alpha(0.5);
 	
-	if (obj_map_controller.mode == mapMode.chooseTarget) {
+	if (obj_map_controller.mode == mapMode.chooseTarget ||
+		obj_map_controller.mode == mapMode.battleForecast) {
 		for (var i=0; i<global.grid_height; i++) {
 			for (var j=0; j<global.grid_width; j++) {
 				if (local_attack_range_grid[# j, i]) 

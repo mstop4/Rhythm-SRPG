@@ -12,7 +12,7 @@ else {
 }
 
 with (obj_map_menu) {
-	if (show_menu && _v_pressed != 0) 
+	if (show_self && _v_pressed != 0) 
 		cursor_pos = wrap(cursor_pos+_v_pressed,0,ds_list_size(item_names)-1);
 }
 
@@ -36,7 +36,7 @@ if (!is_moving && !cursor_lock) {
 				if (selected_unit.move_range_grid[# cell_x, cell_y] == 1) {
 					with (obj_map_cursor) {
 						cursor_lock = true;
-						show_cursor = false;
+						show_self = false;
 						alarm[0] = -1;
 					}
 				
@@ -76,7 +76,7 @@ if (!is_moving && !cursor_lock) {
 			
 				if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Attack") {
 					mode = mapMode.chooseTarget;
-					obj_map_cursor.show_cursor = true;
+					obj_map_cursor.show_self = true;
 					cell_x = selected_unit.cell_x;
 					cell_y = selected_unit.cell_y;
 					obj_map_cursor.prev_x = cell_x;
@@ -95,7 +95,16 @@ if (!is_moving && !cursor_lock) {
 				break;
 				
 			case mapMode.chooseTarget:
+				mode = mapMode.battleForecast;
+				obj_map_cursor.show_self = false;
+				obj_battle_forecast.show_self = true;
 				break;
+				
+			case mapMode.battleForecast:
+				mode = mapMode.actionWait;
+				obj_battle_forecast.show_self = false;
+				alarm[0] = 60;
+				obj_battle_controller.show_self = true;
 		}
 	}
 
@@ -108,7 +117,7 @@ if (!is_moving && !cursor_lock) {
 				cell_y = selected_unit.cell_y;
 			
 				with (obj_map_cursor) {
-					show_cursor = true;
+					show_self = true;
 					cursor_lock = false;
 					x = obj_map_controller.selected_unit.cell_x * CELL_SIZE;
 					y = obj_map_controller.selected_unit.cell_y * CELL_SIZE;
@@ -136,7 +145,7 @@ if (!is_moving && !cursor_lock) {
 				}
 			
 				with (obj_map_cursor) {
-					show_cursor = true;
+					show_self = true;
 					cursor_lock = false;
 				}
 				
@@ -149,7 +158,7 @@ if (!is_moving && !cursor_lock) {
 				
 			case mapMode.chooseTarget:
 				menu_toggle(true);
-				obj_map_cursor.show_cursor = false;
+				obj_map_cursor.show_self = false;
 				cell_x = selected_unit.cell_x;
 				cell_y = selected_unit.cell_y;
 				obj_map_cursor.prev_x = cell_x;
@@ -161,6 +170,11 @@ if (!is_moving && !cursor_lock) {
 				selected_unit.show_range = false;
 				mode = mapMode.action;
 				break;
+				
+			case mapMode.battleForecast:
+				obj_map_cursor.show_self = true;
+				obj_battle_forecast.show_self = false;
+				mode = mapMode.chooseTarget;
 		}
 	}
 }

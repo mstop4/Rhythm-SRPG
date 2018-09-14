@@ -6,7 +6,7 @@ var _su_y = obj_map_controller.selected_unit.y;
 
 
 with (obj_map_menu) {
-	show_menu = _visible;
+	show_self = _visible;
 
 	if (_visible) {
 

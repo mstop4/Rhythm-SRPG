@@ -1,4 +1,4 @@
-show_menu = false;
+show_self = false;
 cursor_pos = 0;
 menu_width = 64;
 menu_height = 0;

@@ -1,4 +1,4 @@
-show_cursor = true;
+show_self = true;
 
 prev_x = x;
 prev_y = y;

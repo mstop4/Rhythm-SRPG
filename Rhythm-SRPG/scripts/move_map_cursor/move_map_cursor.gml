@@ -1,4 +1,4 @@
-if (!is_moving && !cursor_lock && obj_map_cursor.show_cursor) {
+if (!is_moving && !cursor_lock && obj_map_cursor.show_self) {
 	is_moving = true;
 	cursor_lock = true;
 

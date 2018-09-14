@@ -457,6 +457,25 @@
             }
         },
         {
+            "Key": "6b656ee3-489f-4088-86a1-286251020108",
+            "Value": {
+                "id": "a9b2cb93-139d-48a8-b57e-6ecb760e7465",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_battle_forecast\/obj_battle_forecast.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6f19727a-891c-472e-8aa8-242619a3f3a6",
             "Value": {
                 "id": "deb8d219-610e-40fc-aff3-1863e436f477",
