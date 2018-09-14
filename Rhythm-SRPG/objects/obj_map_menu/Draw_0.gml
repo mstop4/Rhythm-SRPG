@@ -1,4 +1,4 @@
-if (show_menu) {
+if (show_self) {
 	draw_set_colour(c_green);
 	draw_rectangle(x,y,x+menu_width,y+menu_height,false);
 	draw_set_colour(c_white);

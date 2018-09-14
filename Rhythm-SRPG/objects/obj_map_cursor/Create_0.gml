@@ -1,7 +1,4 @@
-is_moving = false;
-cursor_lock = false;
-show_cursor = true;
-first_move = true;
+show_self = true;
 
 prev_x = x;
 prev_y = y;

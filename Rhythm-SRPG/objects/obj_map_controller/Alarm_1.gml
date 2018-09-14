@@ -9,4 +9,4 @@ if (phase == team.player) {
 show_turn_banner = false;
 mode = mapMode.pan;
 obj_map_cursor.cursor_lock = false;
-obj_map_cursor.show_cursor = true;
+obj_map_cursor.show_self = true;

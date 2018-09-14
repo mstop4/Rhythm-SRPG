@@ -10,6 +10,7 @@ enum mapMode {
 	moveWait,
 	action,
 	chooseTarget,
+	battleForecast,
 	actionWait
 }
 
