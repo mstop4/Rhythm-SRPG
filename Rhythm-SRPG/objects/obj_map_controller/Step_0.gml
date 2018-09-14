@@ -95,11 +95,16 @@ if (!is_moving && !cursor_lock) {
 				break;
 				
 			case mapMode.chooseTarget:
-				mode = mapMode.battleForecast;
-				obj_map_cursor.show_self = false;
-				obj_battle_forecast.show_self = true;
+				var _tar_unit = find_unit_at_cell(cell_x, cell_y, team.enemy, selected_unit);
+				if (selected_unit.local_attack_range_grid[# cell_x, cell_y] &&
+				 _tar_unit != noone &&
+				 _tar_unit.my_team == team.enemy) {
+					mode = mapMode.battleForecast;
+					obj_map_cursor.show_self = false;
+					obj_battle_forecast.show_self = true;
+				}
 				break;
-				
+									
 			case mapMode.battleForecast:
 				mode = mapMode.actionWait;
 				obj_battle_forecast.show_self = false;
