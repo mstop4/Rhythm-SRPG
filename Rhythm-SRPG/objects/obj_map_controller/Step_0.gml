@@ -42,6 +42,7 @@ if (!is_moving && !cursor_lock) {
 				
 					alarm[3] = -1;
 					alarm[4] = -1;
+					set_camera_target(selected_unit,0,0);
 					
 					with (selected_unit) {
 						prev_cell_x = cell_x;
@@ -76,26 +77,32 @@ if (!is_moving && !cursor_lock) {
 			
 				if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Attack") {
 					mode = mapMode.chooseTarget;
-					obj_map_cursor.show_self = true;
 					cell_x = selected_unit.cell_x;
 					cell_y = selected_unit.cell_y;
-					obj_map_cursor.prev_x = cell_x;
-					obj_map_cursor.prev_y = cell_y;
-					obj_map_cursor.target_x = cell_x;
-					obj_map_cursor.target_y = cell_y;
-					obj_map_cursor.x = cell_x * CELL_SIZE;
-					obj_map_cursor.y = cell_y * CELL_SIZE;
 					selected_unit.show_range = true;
+					
+					with (obj_map_cursor) {
+						show_self = true;
+						prev_x = other.cell_x;
+						prev_y = other.cell_y;
+						target_x = other.cell_x;
+						target_y = other.cell_y;
+						x = other.cell_x * CELL_SIZE;
+						y = other.cell_y * CELL_SIZE;
+					}
 				}
 			
 				else if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Wait") {
 					mode = mapMode.actionWait;
 					alarm[0] = 1;
 				}
+				
+				set_camera_target(obj_map_cursor.id,8,8);
 				break;
 				
 			case mapMode.chooseTarget:
 				var _tar_unit = find_unit_at_cell(cell_x, cell_y, team.enemy, selected_unit);
+				
 				if (selected_unit.local_attack_range_grid[# cell_x, cell_y] &&
 				 _tar_unit != noone &&
 				 _tar_unit.my_team == team.enemy) {
@@ -117,7 +124,6 @@ if (!is_moving && !cursor_lock) {
 	else if (keyboard_check_pressed(ord("Z"))) {
 		switch (mode) {
 			case mapMode.move: 
-			
 				cell_x = selected_unit.cell_x;
 				cell_y = selected_unit.cell_y;
 			
@@ -158,22 +164,26 @@ if (!is_moving && !cursor_lock) {
 				plan_path(player_map_grid);
 				
 				mode = mapMode.move;
+				set_camera_target(obj_map_cursor.id,8,8);
 				menu_toggle(false);
 				break;
 				
 			case mapMode.chooseTarget:
 				menu_toggle(true);
-				obj_map_cursor.show_self = false;
 				cell_x = selected_unit.cell_x;
 				cell_y = selected_unit.cell_y;
-				obj_map_cursor.prev_x = cell_x;
-				obj_map_cursor.prev_y = cell_y;
-				obj_map_cursor.target_x = cell_x;
-				obj_map_cursor.target_y = cell_y;
-				obj_map_cursor.x = cell_x * CELL_SIZE;
-				obj_map_cursor.y = cell_y * CELL_SIZE;
 				selected_unit.show_range = false;
 				mode = mapMode.action;
+				with (obj_map_cursor) {
+					show_self = false;
+					prev_x = other.cell_x;
+					prev_y = other.cell_y;
+					target_x = other.cell_x;
+					target_y = other.cell_y;
+					x = other.cell_x * CELL_SIZE;
+					y = other.cell_y * CELL_SIZE;
+				}
+				set_camera_target(selected_unit,0,0);
 				break;
 				
 			case mapMode.battleForecast:

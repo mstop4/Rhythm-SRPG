@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "41229918-c09b-4cf0-842d-225c56568b09",
+            "Value": {
+                "id": "330f968e-0dd3-4c37-b928-676325b28867",
+                "resourcePath": "scripts\\set_camera_target\\set_camera_target.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "428df26a-bbc7-4f59-b30d-e8e27ed6284a",
             "Value": {
                 "id": "5d08fb8c-1b7c-4974-bbae-7b64127305cc",
@@ -557,6 +565,7 @@
         "c3cdc6ed-ce5f-419c-9f2a-4593dab798e6",
         "9c7923ac-2168-4b99-8ae7-86313726d7a3",
         "562ed514-6b21-475d-b307-e042b56d992f",
+        "41229918-c09b-4cf0-842d-225c56568b09",
         "4d3982e0-94cb-4f92-9cfe-4142f9068392",
         "64ca2f3f-5cb2-4d7b-aaff-b0617bf77a40"
     ],

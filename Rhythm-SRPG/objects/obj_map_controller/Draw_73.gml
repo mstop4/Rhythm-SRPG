@@ -1,1 +1,0 @@
-//mp_grid_draw(player_map_grid);

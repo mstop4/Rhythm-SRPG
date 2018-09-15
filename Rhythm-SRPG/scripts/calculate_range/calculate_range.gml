@@ -27,7 +27,6 @@ for (var i=-move_range; i<=move_range; i++) {
 								false);
 							
 					var _len = path_get_length(_temp_path);
-					print(_len);
 					if (_result && _len <= move_range * CELL_SIZE) {
 						var _legal_cell_x = cell_x + j;
 						var _legal_cell_y = cell_y + i;

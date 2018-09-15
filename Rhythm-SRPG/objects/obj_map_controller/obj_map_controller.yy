@@ -123,16 +123,6 @@
             "enumb": 4,
             "eventtype": 2,
             "m_owner": "390f9b4e-5d72-4e50-a6e6-87d03511f6ae"
-        },
-        {
-            "id": "ae35604b-61f7-419c-beb4-abe65a449984",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 73,
-            "eventtype": 8,
-            "m_owner": "390f9b4e-5d72-4e50-a6e6-87d03511f6ae"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -179,6 +169,34 @@
             "value": "20",
             "varName": "cursor_repeat_delay",
             "varType": 1
+        },
+        {
+            "id": "6786d07b-cbe9-43b2-84c8-9bb08e265762",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "16",
+            "varName": "camera_offset_x",
+            "varType": 0
+        },
+        {
+            "id": "4f0d080d-c867-4bde-b790-493bfc0069ad",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "16",
+            "varName": "camera_offset_y",
+            "varType": 0
         }
     ],
     "solid": false,

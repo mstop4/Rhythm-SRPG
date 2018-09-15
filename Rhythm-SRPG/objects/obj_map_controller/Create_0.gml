@@ -7,7 +7,7 @@ global.camera_y = camera_get_view_y(view_camera[0]);
 global.camera_w = camera_get_view_width(view_camera[0]);
 global.camera_h = camera_get_view_height(view_camera[0]);
 
-camera_target = obj_map_cursor.id;
+set_camera_target(obj_map_cursor.id,8,8);
 display_set_gui_maximize(4,4);
 
 env_grid = ds_grid_create(global.grid_width, global.grid_height);
@@ -36,3 +36,6 @@ for (var i=0; i<3; i++) {
 
 mode = mapMode.pan;
 alarm[2] = 1;
+
+_goal_x = 0;
+_goal_y = 0;
