@@ -1,5 +1,5 @@
 // step
-time_per_step = 60 / bpm  / 2;
+time_per_step = 60 / bpm  / 4;
 step_number = 0;
 num_steps = 8; 
 

@@ -10,6 +10,10 @@ move_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 attack_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 local_attack_range_grid = ds_grid_create(global.grid_width,global.grid_height);
 
+// stats
+my_stats = ds_map_create();
+ds_map_copy(my_stats, obj_MCP.unit_stats[| 0]);
+
 //path
 cur_path_node = 0;
 max_path_node = 0;
