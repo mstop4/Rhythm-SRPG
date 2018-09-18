@@ -94,7 +94,7 @@ if (!is_moving && !cursor_lock) {
 			
 				else if (obj_map_menu.item_names[| obj_map_menu.cursor_pos] == "Wait") {
 					mode = mapMode.actionWait;
-					alarm[0] = 1;
+					end_unit_turn();
 				}
 				
 				set_camera_target(obj_map_cursor.id,8,8);
@@ -115,8 +115,17 @@ if (!is_moving && !cursor_lock) {
 			case mapMode.battleForecast:
 				mode = mapMode.actionWait;
 				obj_battle_forecast.show_self = false;
-				alarm[0] = 120;
 				obj_battle_controller.show_self = true;
+				obj_battle_controller.countdown = 5;
+				
+				print("Step: ", obj_audio_controller.step_number);
+				if (obj_audio_controller.step_number >= 12) {
+					obj_battle_controller.phrases_to_next_battle = 1;
+				}
+				
+				else {
+					obj_battle_controller.phrases_to_next_battle = 0;
+				}
 		}
 	}
 

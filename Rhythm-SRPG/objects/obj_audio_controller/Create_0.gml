@@ -1,9 +1,11 @@
 // step
 time_per_step = 60 / bpm  / 4;
 step_number = 0;
-num_steps = 16; 
+num_steps = 32; 
 
 step_frame = [2, 2, 1, 0, 0, 0, 1, 2, 
+			  2, 2, 1, 0, 0, 0, 1, 2,
+			  2, 2, 1, 0, 0, 0, 1, 2, 
 			  2, 2, 1, 0, 0, 0, 1, 2];
 
 // timing

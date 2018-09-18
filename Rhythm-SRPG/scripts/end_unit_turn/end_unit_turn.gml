@@ -1,4 +1,3 @@
-/// @desc end unit turn
 selected_unit.my_state = unitState.attacked;
 selected_unit = noone;
 obj_battle_controller.show_self = false;
