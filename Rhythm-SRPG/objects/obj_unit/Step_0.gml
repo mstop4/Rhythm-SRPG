@@ -5,7 +5,7 @@ if (is_moving) {
 	}
 	
 	else if //(obj_audio_controller.step_ticker) { 
-		(obj_audio_controller.frame_counter == obj_audio_controller.step_frames - path_step_time){
+		(obj_audio_controller.frame_counter == obj_audio_controller.frames_per_step - path_step_time){
 		path_next_rhythm();
 	}
 }

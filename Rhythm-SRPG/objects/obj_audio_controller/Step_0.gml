@@ -13,10 +13,10 @@ last_pos = _this_pos;
 if (timer >= time_per_step) {
 	step_ticker = true;
 	timer -= time_per_step;
-	step_frames = frame_counter;
+	frames_per_step = frame_counter;
 	frame_counter = 0;
 	light_on = true;
-	step_number = wrap(step_number+1,0,num_steps);
+	step_number = wrap(step_number+1,0,num_steps-1);
 	alarm[0] = 3;
 }
 

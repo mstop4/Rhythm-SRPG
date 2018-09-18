@@ -26,6 +26,7 @@ first_move = true;
 cell_x = 0;
 cell_y = 0;
 selected_unit = noone;
+target_unit = noone;
 phase = team.player;
 show_turn_banner = false;
 
