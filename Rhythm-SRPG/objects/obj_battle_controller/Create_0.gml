@@ -27,7 +27,8 @@ attacker_id = noone;
 defender_id = noone;
 
 phrases_to_next_battle = 0;
-is_battling = false;
+battle_state = battleState.waiting;
+battle_over = false;
 show_countdown = false;
 countdown = 5;
 

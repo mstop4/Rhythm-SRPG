@@ -1,7 +1,7 @@
 if (show_self) {
 	for (var i=0; i<obj_audio_controller.num_steps; i++) {
 		
-		if (is_battling) {
+		if (battle_state == battleState.battling) {
 			if (obj_audio_controller.step_number == i)
 				draw_set_colour(c_red);
 			else 

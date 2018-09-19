@@ -4,6 +4,12 @@ enum unitState {
 	attacked
 }
 
+enum battleState {
+	waiting,
+	battling,
+	over
+}
+
 enum mapMode {
 	pan,
 	move,

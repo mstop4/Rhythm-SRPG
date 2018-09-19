@@ -476,6 +476,25 @@
             }
         },
         {
+            "Key": "5f1550ca-e063-41c2-90c9-618baf0951b2",
+            "Value": {
+                "id": "b4600127-a61d-4dff-b3c2-8dd5f7d40bdf",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/reset_battle_controller\/reset_battle_controller.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "609d95db-d813-4fe7-adba-93edf73aedf2",
             "Value": {
                 "id": "b27d794a-3087-4f74-bbc3-0ca58ac87237",
@@ -1348,7 +1367,8 @@
         "562ed514-6b21-475d-b307-e042b56d992f",
         "41229918-c09b-4cf0-842d-225c56568b09",
         "4d3982e0-94cb-4f92-9cfe-4142f9068392",
-        "64ca2f3f-5cb2-4d7b-aaff-b0617bf77a40"
+        "64ca2f3f-5cb2-4d7b-aaff-b0617bf77a40",
+        "5f1550ca-e063-41c2-90c9-618baf0951b2"
     ],
     "tutorial": ""
 }

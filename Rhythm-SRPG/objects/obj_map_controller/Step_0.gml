@@ -115,17 +115,7 @@ if (!is_moving && !cursor_lock) {
 			case mapMode.battleForecast:
 				mode = mapMode.actionWait;
 				obj_battle_forecast.show_self = false;
-				obj_battle_controller.show_self = true;
-				obj_battle_controller.countdown = 5;
-				
-				print("Step: ", obj_audio_controller.step_number);
-				if (obj_audio_controller.step_number >= 12) {
-					obj_battle_controller.phrases_to_next_battle = 1;
-				}
-				
-				else {
-					obj_battle_controller.phrases_to_next_battle = 0;
-				}
+				reset_battle_controller();
 		}
 	}
 
