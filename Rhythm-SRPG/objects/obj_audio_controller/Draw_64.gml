@@ -8,3 +8,5 @@ else
 	draw_set_color(c_green);
 	
 draw_circle(x+6,y+32,4,false);
+
+draw_text(x+6,y+36,string(_this_pos));

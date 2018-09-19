@@ -11,4 +11,12 @@ with (obj_battle_controller) {
 	else {
 		phrases_to_next_battle = 0;
 	}
+	
+	for (cur_step = 0; cur_step<obj_audio_controller.num_steps && cur_step < obj_audio_controller.num_steps; cur_step++) {
+		if (attacker_notes[cur_step]) 
+			break;
+	}
+	
+	attacker_next_hit_time = (obj_audio_controller.phrase_number + obj_audio_controller.phrases_to_next_battle) *
+							 ((obj_audio_controller.num_steps + cur_step)* obj_audio_controller.time_per_step);
 }

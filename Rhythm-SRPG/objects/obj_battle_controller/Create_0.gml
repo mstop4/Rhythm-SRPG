@@ -26,6 +26,15 @@ defender_notes[30] = true;
 attacker_id = noone;
 defender_id = noone;
 
+attacker_cur_note = 0;
+attacker_next_hit_time = -1;
+attacker_result_text = "";
+attacker_just_hit = false;
+attacker_flubbed = false;
+atacker_force_next_note = false;
+
+// status
+next_start_time = 0;
 phrases_to_next_battle = 0;
 battle_state = battleState.waiting;
 battle_over = false;
