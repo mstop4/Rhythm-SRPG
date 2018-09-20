@@ -85,6 +85,20 @@
             "value": "4",
             "varName": "note_size",
             "varType": 1
+        },
+        {
+            "id": "b51dd17f-8bed-4fae-aa77-ca126ddd1b06",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1\/30",
+            "varName": "attack_window",
+            "varType": 4
         }
     ],
     "solid": false,

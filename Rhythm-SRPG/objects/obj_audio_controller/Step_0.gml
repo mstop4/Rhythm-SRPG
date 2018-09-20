@@ -1,14 +1,18 @@
 if (step_ticker)
 	step_ticker = false;
 	
-_this_pos = audio_sound_get_track_position(bgm);
-if (_this_pos >= last_pos) 
-	dt = _this_pos - last_pos;
-else
-	dt = _this_pos + sound_length - last_pos;
+current_pos = audio_sound_get_track_position(bgm);
+if (current_pos >= last_pos) {
+	has_looped = false;
+	dt = current_pos - last_pos;
+}
+else {
+	has_looped = true;
+	dt = current_pos + music_length - last_pos;
+}
 	
 timer += dt;
-last_pos = _this_pos;
+last_pos = current_pos;
 
 if (timer >= time_per_step) {
 	step_ticker = true;
