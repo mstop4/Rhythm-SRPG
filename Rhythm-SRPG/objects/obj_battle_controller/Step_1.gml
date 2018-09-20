@@ -47,13 +47,12 @@ if (show_self) {
 					attacker_next_hit_in_next_phrase = false;
 				}
 				
-				var time_diff = obj_audio_controller.current_pos - attacker_next_hit_time;
+				attacker_time_diff = obj_audio_controller.current_pos - attacker_next_hit_time;
 				if (attacker_next_hit_in_next_phrase) {
-					time_diff -= obj_audio_controller.music_length;
+					attacker_time_diff -= obj_audio_controller.music_length;
 				}
 				
-				if (time_diff > attack_window) {
-					//print("Time Diff: ", time_diff);
+				if (attacker_time_diff > attack_window) {
 					battle_get_next_note_time();
 				}
 			}

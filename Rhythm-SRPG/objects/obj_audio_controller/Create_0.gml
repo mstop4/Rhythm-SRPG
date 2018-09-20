@@ -1,5 +1,5 @@
 // step
-time_per_step = room_speed / bpm  / 4;
+time_per_step = 60 / bpm  / 4;
 step_number = 0;
 phrase_number = 0;
 num_steps = 32; 
@@ -25,4 +25,4 @@ current_pos = 0;
 
 print("Music Legnth: ", music_length);
 bgm = audio_play_sound(my_music,100,true);
-audio_sound_gain(bgm,0,0);
+//audio_sound_gain(bgm,0,0);

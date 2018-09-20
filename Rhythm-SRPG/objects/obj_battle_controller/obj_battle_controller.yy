@@ -53,6 +53,16 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "c7fa7b9b-d7ab-4350-8052-4ad21585715a"
+        },
+        {
+            "id": "372dd0a8-59c0-4b22-ad78-27f95c2af274",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "c7fa7b9b-d7ab-4350-8052-4ad21585715a"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -98,6 +108,20 @@
             "resourceFilter": 1023,
             "value": "1\/30",
             "varName": "attack_window",
+            "varType": 4
+        },
+        {
+            "id": "f16039a8-3440-4ee5-b065-a745e2714f8d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1\/30",
+            "varName": "hit_offset",
             "varType": 4
         }
     ],

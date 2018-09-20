@@ -1,0 +1,1 @@
+attacker_result_text = "";

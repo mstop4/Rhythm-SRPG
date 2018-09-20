@@ -13,3 +13,5 @@ _unit[? "evade"] = 5;
 
 ds_list_add(unit_stats,_unit);
 ds_list_mark_as_map(unit_stats,0);
+
+math_set_epsilon(0.0001);

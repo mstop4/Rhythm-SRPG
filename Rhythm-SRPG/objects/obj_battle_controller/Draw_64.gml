@@ -1,4 +1,15 @@
 if (show_self) {
+	draw_set_color(c_black);
+	draw_set_font(fnt_pixel);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	
+	draw_text(0,0,"Time Diff: " + string(attacker_time_diff));
+	draw_text(0,16,"Next Hit: " + string(attacker_next_hit_time));
+	draw_text(0,32,"Next Step: " + string(cur_step));
+	
+	draw_text(0,48,attacker_result_text);
+	
 	for (var i=0; i<obj_audio_controller.num_steps; i++) {
 		
 		if (battle_state == battleState.battling) {

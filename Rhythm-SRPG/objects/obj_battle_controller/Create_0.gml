@@ -33,6 +33,7 @@ attacker_result_text = "";
 attacker_just_hit = false;
 attacker_flubbed = false;
 atacker_force_next_note = false;
+attacker_time_diff = -1;
 
 // status
 phrases_to_next_battle = 0;
