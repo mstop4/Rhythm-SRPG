@@ -28,7 +28,6 @@ if (show_self) {
 	
 				show_countdown = true;
 				countdown--;
-				print("Countdown: ", countdown); 
 			}
 		
 			break;

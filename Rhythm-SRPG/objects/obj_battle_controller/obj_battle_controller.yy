@@ -120,7 +120,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1\/30",
+            "value": "0",
             "varName": "hit_offset",
             "varType": 4
         }
