@@ -1,18 +1,25 @@
 show_self = false;
+if (attack_window*2 > obj_audio_controller.time_per_step) {
+	print("WARNING: attack window is long: ", attack_window*2, "s. Needs to be no more than ", obj_audio_controller.time_per_step, "s.");
+}
+
+else {
+	print("Attack window OK: ", attack_window*2, "s. Needs to be no more than ", obj_audio_controller.time_per_step, "s.");
+}
 
 for (var i=0; i<obj_audio_controller.num_steps; i++) {
-	attacker_notes[i] = false;
+	attacker_notes[i] = true;
 	defender_notes[i] = false;
 }
 
-attacker_notes[0] = true;
-//attacker_notes[4] = true;
+/*attacker_notes[0] = true;
+attacker_notes[4] = true;
 attacker_notes[8] = true;
-//attacker_notes[12] = true;
+attacker_notes[12] = true;
 attacker_notes[16] = true;
-//attacker_notes[20] = true;
+attacker_notes[20] = true;
 attacker_notes[24] = true;
-//attacker_notes[28] = true;
+attacker_notes[28] = true;*/
 
 defender_notes[2] = true;
 defender_notes[6] = true;

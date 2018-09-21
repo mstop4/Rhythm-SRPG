@@ -6,8 +6,6 @@ if (show_self) {
 			// phrase counter
 			if (obj_audio_controller.step_ticker &&
 				obj_audio_controller.step_number == 0) {
-			
-				print("Phrases left: ", phrases_to_next_battle);
 	
 				if (phrases_to_next_battle > 0) {
 					phrases_to_next_battle--;

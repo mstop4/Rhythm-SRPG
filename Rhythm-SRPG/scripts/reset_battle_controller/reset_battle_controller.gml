@@ -15,7 +15,6 @@ with (obj_battle_controller) {
 	atacker_force_next_note = false;
 	attacker_time_diff = -1;
 				
-	print("Step: ", _ac.step_number);
 	if (_ac.step_number >= 12) {
 		phrases_to_next_battle = 1;
 	}

@@ -17,12 +17,15 @@ last_pos = current_pos;
 if (timer >= time_per_step) {
 	step_ticker = true;
 	timer -= time_per_step;
+	
 	frames_per_step = frame_counter;
 	frame_counter = 0;
-	light_on = true;
+	
 	step_number = wrap(step_number+1,0,num_steps-1);
 	if (step_number == 0)
 		phrase_number++;
+	
+		light_on = true;
 	alarm[0] = 3;
 }
 
