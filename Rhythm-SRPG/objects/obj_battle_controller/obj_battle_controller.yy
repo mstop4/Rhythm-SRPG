@@ -123,6 +123,20 @@
             "value": "1\/30",
             "varName": "hit_offset",
             "varType": 4
+        },
+        {
+            "id": "b6d1db64-bb64-4cd6-b641-65c140fd06a0",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "2",
+            "varName": "step_scale",
+            "varType": 1
         }
     ],
     "solid": false,

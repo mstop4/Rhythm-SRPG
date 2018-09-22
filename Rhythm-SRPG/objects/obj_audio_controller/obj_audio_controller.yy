@@ -82,7 +82,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "180",
+            "value": "133",
             "varName": "bpm",
             "varType": 0
         },

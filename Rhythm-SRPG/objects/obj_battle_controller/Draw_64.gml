@@ -10,10 +10,10 @@ if (show_self) {
 	
 	draw_text(0,48,attacker_result_text);
 	
-	for (var i=0; i<obj_audio_controller.num_steps; i++) {
+	for (var i=0; i<num_steps; i++) {
 		
 		if (battle_state == battleState.battling) {
-			if (obj_audio_controller.step_number == i)
+			if (obj_audio_controller.step_number div 2 == i)
 				draw_set_colour(c_red);
 			else 
 				draw_set_color(c_white);

@@ -1,34 +1,37 @@
 show_self = false;
-if (attack_window*2 > obj_audio_controller.time_per_step) {
-	print("WARNING: attack window is long: ", attack_window*2, "s. Needs to be no more than ", obj_audio_controller.time_per_step, "s.");
+
+if (attack_window*2 > obj_audio_controller.time_per_step*step_scale) {
+	print("WARNING: attack window is long: ", attack_window*2, "s. Needs to be no more than ", obj_audio_controller.time_per_step*step_scale, "s.");
 }
 
 else {
-	print("Attack window OK: ", attack_window*2, "s. Needs to be no more than ", obj_audio_controller.time_per_step, "s.");
+	print("Attack window OK: ", attack_window*2, "s. Needs to be no more than ", obj_audio_controller.time_per_step*step_scale, "s.");
 }
 
-for (var i=0; i<obj_audio_controller.num_steps; i++) {
-	attacker_notes[i] = true;
+num_steps = obj_audio_controller.num_steps/step_scale;
+
+for (var i=0; i<num_steps; i++) {
+	attacker_notes[i] = false;
 	defender_notes[i] = false;
 }
 
-/*attacker_notes[0] = true;
+attacker_notes[0] = true;
+attacker_notes[2] = true;
 attacker_notes[4] = true;
+attacker_notes[6] = true;
 attacker_notes[8] = true;
+attacker_notes[10] = true;
 attacker_notes[12] = true;
-attacker_notes[16] = true;
-attacker_notes[20] = true;
-attacker_notes[24] = true;
-attacker_notes[28] = true;*/
+attacker_notes[14] = true;
 
-defender_notes[2] = true;
-defender_notes[6] = true;
-defender_notes[10] = true;
-defender_notes[14] = true;
-defender_notes[18] = true;
-defender_notes[22] = true;
-defender_notes[26] = true;
-defender_notes[30] = true;
+defender_notes[1] = true;
+defender_notes[3] = true;
+defender_notes[5] = true;
+defender_notes[7] = true;
+defender_notes[9] = true;
+defender_notes[11] = true;
+defender_notes[13] = true;
+defender_notes[15] = true;
 
 attacker_id = noone;
 defender_id = noone;
@@ -49,5 +52,5 @@ battle_over = false;
 show_countdown = false;
 countdown = 5;
 
-rhythm_chart_x = (320 - (note_size * obj_audio_controller.num_steps)) / 2;
+rhythm_chart_x = (320 - (note_size * num_steps)) / 2;
 rhythm_chart_y = 16;

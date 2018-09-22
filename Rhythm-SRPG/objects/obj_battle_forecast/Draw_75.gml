@@ -28,7 +28,7 @@ if (show_self) {
 				  "\nHit: " + string(_stats[? "hit"]) +
 				  "\nEvd: " + string(_stats[? "evade"]));
 				  
-	for (var i=0; i<obj_audio_controller.num_steps; i++) {
+	for (var i=0; i<obj_battle_controller.num_steps; i++) {
 		if (obj_battle_controller.attacker_notes[i]) {
 			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y,2,false);
 		} else {
