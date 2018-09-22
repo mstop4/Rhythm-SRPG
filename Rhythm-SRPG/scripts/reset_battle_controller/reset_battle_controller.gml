@@ -8,7 +8,7 @@ with (obj_battle_controller) {
 	
 	attacker_cur_note = 0;
 	attacker_next_hit_time = -1;
-	attacker_next_hit_in_next_phrase = false;
+	attacker_next_hit_in_next_phrase = true;
 	attacker_result_text = "";
 	attacker_just_hit = false;
 	attacker_flubbed = false;

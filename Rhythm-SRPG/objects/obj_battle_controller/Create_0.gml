@@ -16,13 +16,13 @@ for (var i=0; i<num_steps; i++) {
 }
 
 attacker_notes[0] = true;
-attacker_notes[2] = true;
+//attacker_notes[2] = true;
 attacker_notes[4] = true;
-attacker_notes[6] = true;
+//attacker_notes[6] = true;
 attacker_notes[8] = true;
-attacker_notes[10] = true;
+//attacker_notes[10] = true;
 attacker_notes[12] = true;
-attacker_notes[14] = true;
+//attacker_notes[14] = true;
 
 defender_notes[1] = true;
 defender_notes[3] = true;
@@ -40,17 +40,15 @@ attacker_cur_note = 0;
 attacker_next_hit_time = -1;
 attacker_next_hit_in_next_phrase = false;
 attacker_result_text = "";
-attacker_just_hit = false;
-attacker_flubbed = false;
-atacker_force_next_note = false;
+attacker_tried = false;
 attacker_time_diff = -1;
 
 // status
 phrases_to_next_battle = 0;
 battle_state = battleState.waiting;
-battle_over = false;
 show_countdown = false;
 countdown = 5;
+battle_started = false;
 
-rhythm_chart_x = (320 - (note_size * num_steps)) / 2;
+rhythm_chart_x = (320 - (note_size * num_steps * 2)) / 2;
 rhythm_chart_y = 16;

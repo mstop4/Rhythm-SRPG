@@ -27,15 +27,15 @@ if (show_self) {
 		}
 		
 		if (obj_battle_controller.attacker_notes[i]) {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y,2,false);
+			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y,2,false);
 		} else {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y,2,true);
+			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y,2,true);
 		}
 
 		if (obj_battle_controller.defender_notes[i]) {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y+note_size+2,2,false);
+			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2,2,false);
 		} else {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y+note_size+2,2,true);
+			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2,2,true);
 		}
 	}
 }

@@ -16,10 +16,19 @@ if (cur_step < num_steps) {
 		attacker_next_hit_time -= _ac.music_length;
 	}
 	
-	attacker_next_hit_in_next_phrase = attacker_next_hit_time < _prev_time;
+	if (battle_state == battleState.waiting) {
+		attacker_next_hit_in_next_phrase = true;
+	}
+	
+	else {
+		attacker_next_hit_in_next_phrase = attacker_next_hit_time < _prev_time;
+	}
+	
+	attacker_tried = false;
 }
 
 else {
 	attacker_next_hit_in_next_phrase = false;
 	attacker_next_hit_time = -1;
+	attacker_tried = true;
 }
