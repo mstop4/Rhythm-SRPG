@@ -11,23 +11,13 @@ if (show_self) {
 	draw_text(0,48,attacker_result_text);
 	
 	for (var i=0; i<num_steps; i++) {
-		
-		if (battle_state == battleState.battling) {
-			if (obj_audio_controller.step_number div 2 == i)
-				draw_set_colour(c_red);
-			else 
-				draw_set_color(c_white);
-		}
-		
-		else
-			draw_set_color(c_white);
 	
 		if (show_countdown) {
 			draw_text(160,rhythm_chart_y-16,string(countdown));
 		}
 		
 		if (obj_battle_controller.attacker_notes[i]) {
-			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y,2,false);
+			draw_sprite(spr_attacker_lamp,1,
 		} else {
 			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y,2,true);
 		}
