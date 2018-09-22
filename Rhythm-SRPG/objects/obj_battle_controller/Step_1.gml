@@ -15,6 +15,8 @@ if (show_self) {
 				battle_get_next_note_time();
 			}
 		}
+			
+		phrase_time_elapsed += obj_audio_controller.dt;
 	}
 	
 	switch (battle_state) {

@@ -5,6 +5,7 @@ with (obj_battle_controller) {
 	battle_state = battleState.waiting;
 	countdown = 5;
 	cur_step = -1;
+	phrase_time_elapsed = _ac.time_per_step*-4;
 	
 	attacker_cur_note = 0;
 	attacker_next_hit_time = -1;
@@ -22,6 +23,6 @@ with (obj_battle_controller) {
 	else {
 		phrases_to_next_battle = 0;
 	}
-	
+							 
 	battle_get_next_note_time();
 }

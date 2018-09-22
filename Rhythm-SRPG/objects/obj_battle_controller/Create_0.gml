@@ -49,6 +49,9 @@ battle_state = battleState.waiting;
 show_countdown = false;
 countdown = 5;
 battle_started = false;
+phrase_time_elapsed = 0;
+phrase_length = obj_audio_controller.time_per_step * obj_audio_controller.num_steps;
 
 rhythm_chart_x = (320 - (note_size * num_steps * 2)) / 2;
+rhythm_chart_x_end = (320 + (note_size * num_steps * 2)) / 2;
 rhythm_chart_y = 16;

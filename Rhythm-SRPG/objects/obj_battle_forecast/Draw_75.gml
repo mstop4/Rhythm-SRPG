@@ -30,15 +30,15 @@ if (show_self) {
 				  
 	for (var i=0; i<obj_battle_controller.num_steps; i++) {
 		if (obj_battle_controller.attacker_notes[i]) {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y,2,false);
+			draw_sprite(spr_attacker_lamp,1,rhythm_chart_x + i*note_size*2, rhythm_chart_y);
 		} else {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y,2,true);
+			draw_sprite(spr_attacker_lamp,0,rhythm_chart_x + i*note_size*2, rhythm_chart_y);
 		}
 
 		if (obj_battle_controller.defender_notes[i]) {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y+note_size+2,2,false);
+			draw_sprite(spr_attacker_lamp,1,rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2);
 		} else {
-			draw_circle(rhythm_chart_x + i*note_size, rhythm_chart_y+note_size+2,2,true);
+			draw_sprite(spr_attacker_lamp,0,rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2);
 		}
 	}
 }

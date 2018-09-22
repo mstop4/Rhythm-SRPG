@@ -17,15 +17,20 @@ if (show_self) {
 		}
 		
 		if (obj_battle_controller.attacker_notes[i]) {
-			draw_sprite(spr_attacker_lamp,1,
+			draw_sprite(spr_attacker_lamp,1,rhythm_chart_x + i*note_size*2, rhythm_chart_y);
 		} else {
-			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y,2,true);
+			draw_sprite(spr_attacker_lamp,0,rhythm_chart_x + i*note_size*2, rhythm_chart_y);
 		}
 
 		if (obj_battle_controller.defender_notes[i]) {
-			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2,2,false);
+			draw_sprite(spr_attacker_lamp,1,rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2);
 		} else {
-			draw_circle(rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2,2,true);
+			draw_sprite(spr_attacker_lamp,0,rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2);
 		}
+	}
+	
+	if (battle_started) {
+		var _xx = lerp(rhythm_chart_x,rhythm_chart_x_end,phrase_time_elapsed/phrase_length);
+		draw_line(_xx,rhythm_chart_y-4,_xx,rhythm_chart_y+note_size+2+4);
 	}
 }
