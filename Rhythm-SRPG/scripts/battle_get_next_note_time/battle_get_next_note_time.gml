@@ -23,12 +23,9 @@ if (cur_step < num_steps) {
 	else {
 		attacker_next_hit_in_next_phrase = attacker_next_hit_time < _prev_time;
 	}
-	
-	attacker_tried = false;
 }
 
 else {
 	attacker_next_hit_in_next_phrase = false;
 	attacker_next_hit_time = -1;
-	attacker_tried = true;
 }

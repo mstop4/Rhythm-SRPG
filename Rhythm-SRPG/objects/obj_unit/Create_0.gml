@@ -24,4 +24,9 @@ target_y = y;
 is_moving = false;
 can_move = false;
 
+step_frame = [2, 2, 1, 0, 0, 0, 1, 2, 
+			  2, 2, 1, 0, 0, 0, 1, 2,
+			  2, 2, 1, 0, 0, 0, 1, 2, 
+			  2, 2, 1, 0, 0, 0, 1, 2];
+
 alarm[0] = 1;

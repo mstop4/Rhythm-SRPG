@@ -3,3 +3,4 @@ if (my_state == unitState.attacked)
 else
 	image_blend = c_white;
 	
+image_index = step_frame[obj_audio_controller.step_number];

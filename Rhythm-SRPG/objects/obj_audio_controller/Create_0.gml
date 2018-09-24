@@ -4,11 +4,6 @@ step_number = 0;
 phrase_number = 0;
 num_steps = 32; 
 
-step_frame = [2, 2, 1, 0, 0, 0, 1, 2, 
-			  2, 2, 1, 0, 0, 0, 1, 2,
-			  2, 2, 1, 0, 0, 0, 1, 2, 
-			  2, 2, 1, 0, 0, 0, 1, 2];
-
 // timing
 timer = 0;
 last_pos = 0;

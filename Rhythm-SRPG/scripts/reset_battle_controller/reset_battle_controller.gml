@@ -23,6 +23,9 @@ with (obj_battle_controller) {
 	else {
 		phrases_to_next_battle = 0;
 	}
+	
+	print("-----");
+	print("hit Window: ", string_format(obj_battle_controller.attack_window,1,5));
 							 
 	battle_get_next_note_time();
 }

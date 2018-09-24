@@ -1,4 +1,4 @@
-if (light_on) {
+/*if (light_on) {
 	if (step_number mod 2 == 0)
 		draw_set_color(c_lime);
 	else
@@ -9,4 +9,4 @@ else
 	
 draw_circle(x+6,y+32,4,false);
 
-draw_text(x+6,y+36,string(current_pos));
+draw_text(x+6,y+36,string(current_pos));*/

@@ -92,7 +92,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "4",
+            "value": "5",
             "varName": "note_size",
             "varType": 1
         },
@@ -106,7 +106,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1\/30",
+            "value": "1\/20",
             "varName": "attack_window",
             "varType": 4
         },

@@ -1,4 +1,7 @@
 if (show_self) {
+	
+	var _bc = obj_battle_controller.id;
+	
 	draw_set_font(fnt_pixel);
 	draw_set_halign(fa_left);
 	draw_set_color(c_silver);
@@ -28,17 +31,17 @@ if (show_self) {
 				  "\nHit: " + string(_stats[? "hit"]) +
 				  "\nEvd: " + string(_stats[? "evade"]));
 				  
-	for (var i=0; i<obj_battle_controller.num_steps; i++) {
-		if (obj_battle_controller.attacker_notes[i]) {
-			draw_sprite(spr_attacker_lamp,1,rhythm_chart_x + i*note_size*2, rhythm_chart_y);
+	for (var i=0; i<_bc.num_steps; i++) {
+		if (_bc.attacker_notes[i]) {
+			draw_sprite(spr_attacker_lamp,1,_bc.rhythm_chart_x + i*_bc.note_size*2, _bc.rhythm_chart_y);
 		} else {
-			draw_sprite(spr_attacker_lamp,0,rhythm_chart_x + i*note_size*2, rhythm_chart_y);
+			draw_sprite(spr_attacker_lamp,0,_bc.rhythm_chart_x + i*_bc.note_size*2, _bc.rhythm_chart_y);
 		}
 
-		if (obj_battle_controller.defender_notes[i]) {
-			draw_sprite(spr_attacker_lamp,1,rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2);
+		if (_bc.defender_notes[i]) {
+			draw_sprite(spr_attacker_lamp,1,_bc.rhythm_chart_x + i*_bc.note_size*2, _bc.rhythm_chart_y+_bc.note_size+2);
 		} else {
-			draw_sprite(spr_attacker_lamp,0,rhythm_chart_x + i*note_size*2, rhythm_chart_y+note_size+2);
+			draw_sprite(spr_attacker_lamp,0,_bc.rhythm_chart_x + i*_bc.note_size*2, _bc.rhythm_chart_y+_bc.note_size+2);
 		}
 	}
 }

@@ -40,7 +40,6 @@ attacker_cur_note = 0;
 attacker_next_hit_time = -1;
 attacker_next_hit_in_next_phrase = false;
 attacker_result_text = "";
-attacker_tried = false;
 attacker_time_diff = -1;
 
 // status

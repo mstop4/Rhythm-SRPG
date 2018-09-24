@@ -1,8 +1,8 @@
 if (show_range) {
 	if (obj_map_controller.mode == mapMode.pan)
-		draw_set_alpha(0.25);
-	else
 		draw_set_alpha(0.5);
+	else
+		draw_set_alpha(0.75);
 	
 	if (obj_map_controller.mode == mapMode.chooseTarget ||
 		obj_map_controller.mode == mapMode.battleForecast) {
