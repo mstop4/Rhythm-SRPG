@@ -54,3 +54,10 @@ phrase_length = obj_audio_controller.time_per_step * obj_audio_controller.num_st
 rhythm_chart_x = (320 - (note_size * num_steps * 2)) / 2;
 rhythm_chart_x_end = (320 + (note_size * num_steps * 2)) / 2;
 rhythm_chart_y = 16;
+
+shake_x = 0;
+shake_y = 0;
+shake_strength_x = 0;
+shake_strength_y = 0;
+
+battle_surf = surface_create(global.camera_w, global.camera_h);

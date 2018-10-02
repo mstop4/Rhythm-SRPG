@@ -66,6 +66,14 @@ if (!is_moving && !cursor_lock) {
 						mode = mapMode.moveWait;
 					}
 				}
+				
+				// move onto enemy unit
+				/*else if (selected_unit.attack_range_grid[# cell_x, cell_y] == 1) {
+					var _unit = find_unit_at_cell(cell_x, cell_t, team.enemy, id);
+					if (_unit) {
+						map_chooseTarget();
+					}
+				}*/
 				break;
 			
 			case mapMode.action:
@@ -101,15 +109,7 @@ if (!is_moving && !cursor_lock) {
 				break;
 				
 			case mapMode.chooseTarget:
-				target_unit = find_unit_at_cell(cell_x, cell_y, team.enemy, selected_unit);
-				
-				if (selected_unit.local_attack_range_grid[# cell_x, cell_y] &&
-				 target_unit != noone &&
-				 target_unit.my_team == team.enemy) {
-					mode = mapMode.battleForecast;
-					obj_map_cursor.show_self = false;
-					obj_battle_forecast.show_self = true;
-				}
+				map_chooseTarget();
 				break;
 									
 			case mapMode.battleForecast:
@@ -138,7 +138,7 @@ if (!is_moving && !cursor_lock) {
 				}
 				
 				selected_unit.show_range = false;
-				get_unit_at_cursor();
+				select_unit_at_cursor();
 			
 				mode = mapMode.pan;
 				break;

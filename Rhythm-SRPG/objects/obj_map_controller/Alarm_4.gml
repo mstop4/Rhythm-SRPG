@@ -4,7 +4,7 @@ is_moving = false;
 
 switch (mode) {
 	case mapMode.pan:
-		get_unit_at_cursor();
+		select_unit_at_cursor();
 		break;
 		
 	case mapMode.move:
